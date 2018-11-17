@@ -5,45 +5,55 @@ import java.util.Stack;
 
 public class SyntaxAnalyzer {
 
+    PPT ppt = new PPT();
+    ReductionTable reductionTable = new ReductionTable();
+
     public void analyze(ArrayList<Token> tokenList) {
-        PPT ppt = new PPT();
-        ReductionTable reductionTable = new ReductionTable();
 
         Stack<Token> tokenStack = new Stack<Token>();
         Stack<Integer> stateStack = new Stack<Integer>();
-        tokenStack.push(new Token(-1, "$"));
+        tokenStack.push(new Token(Token.DOLLAR_R, "$"));
         stateStack.push(0);
 
-        int pointer = 0;
+        int state = 0;
 
-        while(true){
-            Token token = tokenList.get(pointer);
-            Operation operation = ppt.getItem(stateStack.peek(), token.getType());
+        for (int i = 0; i < tokenList.size(); i++) {
+            Token token = tokenList.get(i);
+            Operation operation = ppt.getItem(state, token.getType());
+            if (operation.getType() == -1) {
+                //throw exception
+            } else {
+                switch (operation.getType()) {
+                    case Operation.MOVE_IN:
+                        tokenStack.push(token);
+                        state = operation.getValue();
+                        stateStack.push(state);
+                        break;
+                    case Operation.REDUCE:
+                        Reduction reduction = reductionTable.getReduction(operation.getValue());
+                        System.out.println(reduction);
+                        int len = reduction.getRight().size();
+                        for (int j = 0; j < len; j++) {
+                            tokenStack.pop();
+                            stateStack.pop();
+                        }
+                        token = new Token(Token.E, "E");
+                        tokenStack.push(token);
+                        state = stateStack.peek();
 
-            if(operation.getType() == Operation.MOVE_IN){
-                //move in
-                stateStack.push(operation.getValue());
-                tokenStack.push(token);
-                pointer++;
-            }
-            else if(operation.getType() == Operation.REDUCE){
-               //reduce
-                Reduction reduction = reductionTable.getReduction(operation.getValue());
-                if(operation.getValue() == 0){
-                    //success
-                    System.out.println("SUCCESS");
-                    break;
+                        //goto
+                        operation = ppt.getItem(state, token.getType());
+                        if (operation.getType() != Operation.GO_TO) {
+                            //exception
+                        }
+                        stateStack.push(operation.getValue());
+                        i--; //状态不能改变
+                        break;
+                    default:
+                        //exception
+                        break;
                 }
-                for(int i=0;i<reduction.getRight().size();i++){
-                    stateStack.pop();
-                    tokenStack.pop();
-                }
-                Token vn = new Token(Token.E, "E");
-                tokenStack.push(vn);
-                state
-
             }
-
         }
     }
 }

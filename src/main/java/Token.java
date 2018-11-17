@@ -32,4 +32,8 @@ public class Token {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public String toString() {
+        return "<"+type+":"+content+">";
+    }
 }
