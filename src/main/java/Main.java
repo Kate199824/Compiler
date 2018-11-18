@@ -7,11 +7,15 @@ public class Main {
         LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer();
         SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer();
 
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        while (true){
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
 
-        ArrayList<Token> tokenList = lexicalAnalyzer.getToken(input);
-
+            ArrayList<Token> result = lexicalAnalyzer.getToken(input);
+            if(result != null){
+                syntaxAnalyzer.analyze(result);
+            }
+        }
 
     }
 }

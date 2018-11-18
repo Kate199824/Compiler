@@ -22,6 +22,8 @@ public class SyntaxAnalyzer {
             Operation operation = ppt.getItem(state, token.getType());
             if (operation.getType() == -1) {
                 //throw exception
+                System.out.println("Syntax error!");
+                break;
             } else {
                 switch (operation.getType()) {
                     case Operation.MOVE_IN:
@@ -56,6 +58,7 @@ public class SyntaxAnalyzer {
                         break;
                     default:
                         //exception
+                        System.out.println("Syntax error!");
                         break;
                 }
             }

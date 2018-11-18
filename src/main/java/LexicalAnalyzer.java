@@ -42,6 +42,8 @@ public class LexicalAnalyzer {
                         }
                     } else {
                         //exception
+                        System.out.println("Lexical error");
+                        return null;
                     }
                     break;
             }
