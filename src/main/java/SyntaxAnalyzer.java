@@ -32,6 +32,10 @@ public class SyntaxAnalyzer {
                     case Operation.REDUCE:
                         Reduction reduction = reductionTable.getReduction(operation.getValue());
                         System.out.println(reduction);
+                        if (operation.getValue() == 0) {
+                            break;
+                        }
+
                         int len = reduction.getRight().size();
                         for (int j = 0; j < len; j++) {
                             tokenStack.pop();
@@ -46,7 +50,8 @@ public class SyntaxAnalyzer {
                         if (operation.getType() != Operation.GO_TO) {
                             //exception
                         }
-                        stateStack.push(operation.getValue());
+                        state = operation.getValue();
+                        stateStack.push(state);
                         i--; //状态不能改变
                         break;
                     default:

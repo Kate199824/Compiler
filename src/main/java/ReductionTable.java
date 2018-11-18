@@ -13,26 +13,23 @@ public class ReductionTable {
         right1.add("E");
         right1.add("+");
         right1.add("E");
-        Reduction reduction1 = new Reduction("E", right0);
-
-        ArrayList<String> left2 = new ArrayList<String>();
+        Reduction reduction1 = new Reduction("E", right1);
+        
         ArrayList<String> right2 = new ArrayList<String>();
-        right1.add("E");
-        right1.add("*");
-        right1.add("E");
-        Reduction reduction2 = new Reduction("E", right0);
+        right2.add("E");
+        right2.add("*");
+        right2.add("E");
+        Reduction reduction2 = new Reduction("E", right2);
 
-        ArrayList<String> left3 = new ArrayList<String>();
         ArrayList<String> right3 = new ArrayList<String>();
-        right1.add("(");
-        right1.add("E");
-        right1.add(")");
-        Reduction reduction3 = new Reduction("E", right0);
+        right3.add("(");
+        right3.add("E");
+        right3.add(")");
+        Reduction reduction3 = new Reduction("E", right3);
 
-        ArrayList<String> left4 = new ArrayList<String>();
         ArrayList<String> right4 = new ArrayList<String>();
-        right0.add("id");
-        Reduction reduction4 = new Reduction("E", right0);
+        right4.add("id");
+        Reduction reduction4 = new Reduction("E", right4);
 
         reductionTable = new ArrayList<Reduction>();
         reductionTable.add(reduction0);

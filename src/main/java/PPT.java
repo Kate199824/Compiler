@@ -16,85 +16,85 @@ public class PPT {
        state0.add(new Operation(Operation.GO_TO,1));//E
 
        ArrayList<Operation> state1 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.MOVE_IN,4));//+
-       state0.add(new Operation(Operation.MOVE_IN,5));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(-1,-1));//)
-       state0.add(new Operation(Operation.REDUCE, 0));//$
-       state0.add(new Operation(-1,-1));//E
+       state1.add(new Operation(-1,-1));//id
+       state1.add(new Operation(Operation.MOVE_IN,4));//+
+       state1.add(new Operation(Operation.MOVE_IN,5));//*
+       state1.add(new Operation(-1,-1));//(
+       state1.add(new Operation(-1,-1));//)
+       state1.add(new Operation(Operation.REDUCE, 0));//$
+       state1.add(new Operation(-1,-1));//E
 
        ArrayList<Operation> state2 = new ArrayList<Operation>();
-       state0.add(new Operation(Operation.MOVE_IN,3));//id
-       state0.add(new Operation(-1,-1));//+
-       state0.add(new Operation(-1,-1));//*
-       state0.add(new Operation(Operation.MOVE_IN,2));//(
-       state0.add(new Operation(-1,-1));//)
-       state0.add(new Operation(-1,-1));//$
-       state0.add(new Operation(Operation.GO_TO,6));//E
+       state2.add(new Operation(Operation.MOVE_IN,3));//id
+       state2.add(new Operation(-1,-1));//+
+       state2.add(new Operation(-1,-1));//*
+       state2.add(new Operation(Operation.MOVE_IN,2));//(
+       state2.add(new Operation(-1,-1));//)
+       state2.add(new Operation(-1,-1));//$
+       state2.add(new Operation(Operation.GO_TO,6));//E
 
        ArrayList<Operation> state3 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.REDUCE,4));//+
-       state0.add(new Operation(Operation.REDUCE,4));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(Operation.REDUCE,4));//)
-       state0.add(new Operation(Operation.REDUCE,4));//$
-       state0.add(new Operation(-1,-1));//E
+       state3.add(new Operation(-1,-1));//id
+       state3.add(new Operation(Operation.REDUCE,4));//+
+       state3.add(new Operation(Operation.REDUCE,4));//*
+       state3.add(new Operation(-1,-1));//(
+       state3.add(new Operation(Operation.REDUCE,4));//)
+       state3.add(new Operation(Operation.REDUCE,4));//$
+       state3.add(new Operation(-1,-1));//E
 
        ArrayList<Operation> state4 = new ArrayList<Operation>();
-       state0.add(new Operation(Operation.MOVE_IN, 3));//id
-       state0.add(new Operation(-1, -1));//+
-       state0.add(new Operation(-1,-1));//*
-       state0.add(new Operation(Operation.MOVE_IN,2));//(
-       state0.add(new Operation(-1,-1));//)
-       state0.add(new Operation(-1,-1));//$
-       state0.add(new Operation(Operation.GO_TO,7));//E
+       state4.add(new Operation(Operation.MOVE_IN, 3));//id
+       state4.add(new Operation(-1, -1));//+
+       state4.add(new Operation(-1,-1));//*
+       state4.add(new Operation(Operation.MOVE_IN,2));//(
+       state4.add(new Operation(-1,-1));//)
+       state4.add(new Operation(-1,-1));//$
+       state4.add(new Operation(Operation.GO_TO,7));//E
 
        ArrayList<Operation> state5 = new ArrayList<Operation>();
-       state0.add(new Operation(Operation.MOVE_IN, 3));//id
-       state0.add(new Operation(-1, -1));//+
-       state0.add(new Operation(-1,-1));//*
-       state0.add(new Operation(Operation.MOVE_IN,2));//(
-       state0.add(new Operation(-1,-1));//)
-       state0.add(new Operation(-1,-1));//$
-       state0.add(new Operation(Operation.GO_TO,8));//E
+       state5.add(new Operation(Operation.MOVE_IN, 3));//id
+       state5.add(new Operation(-1, -1));//+
+       state5.add(new Operation(-1,-1));//*
+       state5.add(new Operation(Operation.MOVE_IN,2));//(
+       state5.add(new Operation(-1,-1));//)
+       state5.add(new Operation(-1,-1));//$
+       state5.add(new Operation(Operation.GO_TO,8));//E
 
        ArrayList<Operation> state6 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.MOVE_IN,4));//+
-       state0.add(new Operation(Operation.MOVE_IN,5));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(Operation.MOVE_IN,9));//)
-       state0.add(new Operation(-1,-1));//$
-       state0.add(new Operation(-1,-1));//E
+       state6.add(new Operation(-1,-1));//id
+       state6.add(new Operation(Operation.MOVE_IN,4));//+
+       state6.add(new Operation(Operation.MOVE_IN,5));//*
+       state6.add(new Operation(-1,-1));//(
+       state6.add(new Operation(Operation.MOVE_IN,9));//)
+       state6.add(new Operation(-1,-1));//$
+       state6.add(new Operation(-1,-1));//E
 
        ArrayList<Operation> state7 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.REDUCE,1));//+
-       state0.add(new Operation(Operation.MOVE_IN,5));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(Operation.REDUCE,1));//)
-       state0.add(new Operation(Operation.REDUCE,1));//$
-       state0.add(new Operation(-1,-1));//E
+       state7.add(new Operation(-1,-1));//id
+       state7.add(new Operation(Operation.REDUCE,1));//+
+       state7.add(new Operation(Operation.MOVE_IN,5));//*
+       state7.add(new Operation(-1,-1));//(
+       state7.add(new Operation(Operation.REDUCE,1));//)
+       state7.add(new Operation(Operation.REDUCE,1));//$
+       state7.add(new Operation(-1,-1));//E
 
        ArrayList<Operation> state8 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.REDUCE,2));//+
-       state0.add(new Operation(Operation.REDUCE,2));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(Operation.REDUCE,2));//)
-       state0.add(new Operation(Operation.REDUCE,2));//$
-       state0.add(new Operation(-1,-1));//E
+       state8.add(new Operation(-1,-1));//id
+       state8.add(new Operation(Operation.REDUCE,2));//+
+       state8.add(new Operation(Operation.REDUCE,2));//*
+       state8.add(new Operation(-1,-1));//(
+       state8.add(new Operation(Operation.REDUCE,2));//)
+       state8.add(new Operation(Operation.REDUCE,2));//$
+       state8.add(new Operation(-1,-1));//E
 
        ArrayList<Operation> state9 = new ArrayList<Operation>();
-       state0.add(new Operation(-1,-1));//id
-       state0.add(new Operation(Operation.REDUCE,3));//+
-       state0.add(new Operation(Operation.REDUCE,3));//*
-       state0.add(new Operation(-1,-1));//(
-       state0.add(new Operation(Operation.REDUCE,3));//)
-       state0.add(new Operation(Operation.REDUCE,3));//$
-       state0.add(new Operation(-1,-1));//E
+       state9.add(new Operation(-1,-1));//id
+       state9.add(new Operation(Operation.REDUCE,3));//+
+       state9.add(new Operation(Operation.REDUCE,3));//*
+       state9.add(new Operation(-1,-1));//(
+       state9.add(new Operation(Operation.REDUCE,3));//)
+       state9.add(new Operation(Operation.REDUCE,3));//$
+       state9.add(new Operation(-1,-1));//E
 
        ppt = new ArrayList<ArrayList<Operation>>();
        ppt.add(state0);
